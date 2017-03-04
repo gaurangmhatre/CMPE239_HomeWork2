@@ -202,7 +202,7 @@ smatrixFromTesting = cosine_similarity(smatrixFromTesting, dense_output=False)
 
 #result = 1 - spatial.distance.cosine(smatrixFromTraining, smatrixFromTesting)
 
-
+f = open('TestData/Test/format_out.dat', 'w')
 for vt in smatrixFromTesting:
     cosineSimilarityValues=[]
     for vS in smatrixFromTraining:
@@ -210,18 +210,31 @@ for vt in smatrixFromTesting:
         lengtht = np.linalg.norm(vt.data)
         lengthS = np.linalg.norm(vS.data)
 
+        #handle exceptions
         cosineSimilarityValue= dotProduct/(lengtht*lengthS)
         cosineSimilarityValues.append(cosineSimilarityValue)
 
-    kneighbours = heapq.nlargest(2, cosineSimilarityValues)
+    kneighbours = heapq.nlargest(9, cosineSimilarityValues)
+
+    neighbourReviewTypeList = []
+    neighbourReviewTypeNegative = 0
+    neighbourReviewTypePositive = 0
 
     for neighbour in kneighbours:
             index = cosineSimilarityValues.index(neighbour)
 
             if linesOfTrainData[index].strip()[0] == '-':
-                    print ("-1")
+                neighbourReviewTypeList.append("-1")
+                neighbourReviewTypeNegative+=1
             elif linesOfTrainData[index].strip()[0] == '+':
-                    print ("+1")
+                neighbourReviewTypeList.append("+1")
+                neighbourReviewTypePositive+=1
+
+
+    if neighbourReviewTypeNegative > neighbourReviewTypePositive:
+        f.write('-1\n')
+    else:
+        f.write('+1\n')
 
 
 
