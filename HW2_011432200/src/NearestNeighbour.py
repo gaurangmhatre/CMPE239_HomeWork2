@@ -17,8 +17,8 @@ import heapq
 
 from nltk.corpus import stopwords
 
-#with open("TestData/train.dat", "r") as fh:
-with open("TestData/Test/training_out.dat", "r") as fh:
+with open("TestData/train.dat", "r") as fh:
+#with open("TestData/Test/training_out.dat", "r") as fh:
     linesOfTrainData = fh.readlines()
 len(linesOfTrainData)
 
@@ -29,6 +29,7 @@ len(linesOfTrainData)
 # print("Number of words: %d." % np.sum([len(d) for d in docsTrain]))
 
 # Format data : open docs file and read its lines
+
 #with open("TestData/format.dat", "r") as fh:
 with open("TestData/Test/format_out.dat", "r") as fh:
     linesOfFormat = fh.readlines()
@@ -41,6 +42,7 @@ len(linesOfFormat)
 # print("Number of words: %d." % np.sum([len(d) for d in docsFormat]))
 
 # Test Data : open docs file and read its lines
+
 #with open("TestData/test.dat", "r") as fh:
 with open("TestData/Test/test_out.dat", "r") as fh:
     linesOfTest = fh.readlines()
@@ -144,12 +146,12 @@ vectorizer.fit_transform(linesOfTrainDataAfterSteming)
 print (vectorizer.vocabulary_)
 
 #Sparce vectore for training
-smatrixFromTraining = vectorizer.transform(linesOfTrainDataAfterSteming)
-print(smatrixFromTraining)
+
+#print(smatrixFromTraining)
 
 print('-----')
 
-smatrixFromTraining = cosine_similarity(smatrixFromTraining, dense_output=False)
+#smatrixFromTraining = cosine_similarity(smatrixFromTraining, dense_output=False)
 
 ######
 
@@ -176,28 +178,25 @@ for line in linesOfTestDataAfterPreProcessing:
 
 print("After steming"+ linesOfTestDataAfterSteming[0])
 
-wordsInTraining = {}
-for d in linesOfTestDataAfterPreProcessing:
-    for w in d.split():
-        if w not in wordsInTraining:
-            wordsInTraining[w] = 1
-        else:
-            wordsInTraining[w] += 1
-print("Number of unique words in Test: %d." % len(wordsInTraining))
+# wordsInTraining = {}
+# for d in linesOfTestDataAfterPreProcessing:
+#     for w in d.split():
+#         if w not in wordsInTraining:
+#             wordsInTraining[w] = 1
+#         else:
+#             wordsInTraining[w] += 1
+# print("Number of unique words in Test: %d." % len(wordsInTraining))
 
 
 print ("First line after cleanup from test Data: : ", linesOfTestDataAfterSteming[0])
 
-vectorizer.fit_transform(linesOfTestDataAfterPreProcessing)
-print (vectorizer.vocabulary_)
 
-#Sparce vectore for training
+smatrixFromTraining = vectorizer.transform(linesOfTrainDataAfterSteming)
 smatrixFromTesting = vectorizer.transform(linesOfTestDataAfterPreProcessing)
-print(smatrixFromTesting)
 
 print('-----')
 
-smatrixFromTesting = cosine_similarity(smatrixFromTesting, dense_output=False)
+#smatrixFromTesting = cosine_similarity(smatrixFromTesting, dense_output=False)
 
 
 #result = 1 - spatial.distance.cosine(smatrixFromTraining, smatrixFromTesting)
@@ -206,12 +205,16 @@ f = open('TestData/Test/format_out.dat', 'w')
 for vt in smatrixFromTesting:
     cosineSimilarityValues=[]
     for vS in smatrixFromTraining:
-        dotProduct = vt.T.dot(vS)[0,0]
+        dotProduct = vt.dot(np.transpose(vS))
         lengtht = np.linalg.norm(vt.data)
         lengthS = np.linalg.norm(vS.data)
 
         #handle exceptions
-        cosineSimilarityValue= dotProduct/(lengtht*lengthS)
+
+        if lengthS!=0 and lengtht!=0 :
+            cosineSimilarityValue= dotProduct/(lengtht*lengthS)
+        else:
+            cosineSimilarityValue= 0
         cosineSimilarityValues.append(cosineSimilarityValue)
 
     kneighbours = heapq.nlargest(9, cosineSimilarityValues)
@@ -221,7 +224,7 @@ for vt in smatrixFromTesting:
     neighbourReviewTypePositive = 0
 
     for neighbour in kneighbours:
-            index = cosineSimilarityValues.index(neighbour)
+            index = cosineSimilarityValues.index(neighbour.data[0])
 
             if linesOfTrainData[index].strip()[0] == '-':
                 neighbourReviewTypeList.append("-1")
@@ -237,17 +240,10 @@ for vt in smatrixFromTesting:
         f.write('+1\n')
 
 
+#    print(len(cosineSimilarityValues));
 
 
-
-
-    print(len(cosineSimilarityValues));
-
-
-
-
-
-print('-----')
+print('---END---')
 
 
 

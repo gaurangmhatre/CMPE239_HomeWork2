@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/NearestNeighbour.py" line="108" mnemonic="3" />
+    <bookmark url="file://$PROJECT_DIR$/src/NearestNeighbour.py" line="110" mnemonic="3" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a842832-6ab0-4049-8f75-b7f05c2acd90" name="Default" comment="" />
@@ -13,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/HW2_011432200$NearestNeighbour.coverage" NAME="NearestNeighbour Coverage Results" MODIFIED="1488621679089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/HW2_011432200$NearestNeighbour.coverage" NAME="NearestNeighbour Coverage Results" MODIFIED="1488660880296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/HW2_011432200$test.coverage" NAME="test Coverage Results" MODIFIED="1488389992674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -25,23 +25,23 @@
       <file leaf-file-name="NearestNeighbour.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/NearestNeighbour.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="205" column="0" lean-forward="true" selection-start-line="205" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
+            <state relative-caret-position="387">
+              <caret line="241" column="0" lean-forward="true" selection-start-line="241" selection-start-column="0" selection-end-line="241" selection-end-column="0" />
               <folding>
                 <element signature="e#18#36#0" expanded="true" />
-                <element signature="e#643#679#0" expanded="false" />
-                <element signature="e#1079#1115#0" expanded="false" />
-                <element signature="e#6699#6761#0" expanded="false" />
+                <element signature="e#1508#1544#0" expanded="false" />
+                <element signature="e#5109#5131#0" expanded="false" />
+                <element signature="e#7121#7183#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="apport_python_hook.py" pinned="false" current-in-tab="false">
-        <entry file="file:///usr/lib/python3/dist-packages/apport_python_hook.py">
+      <file leaf-file-name="compressed.py" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/lib/python3.5/dist-packages/scipy/sparse/compressed.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="151" column="0" lean-forward="false" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+            <state relative-caret-position="-3289">
+              <caret line="224" column="0" lean-forward="false" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -60,7 +60,7 @@
       <file leaf-file-name="pydevd.py" pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_PLUGINS_DIR$/python/helpers/pydev/pydevd.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28080">
+            <state relative-caret-position="238">
               <caret line="1595" column="0" lean-forward="false" selection-start-line="1595" selection-start-column="0" selection-end-line="1595" selection-end-column="0" />
               <folding />
             </state>
@@ -102,8 +102,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1417" />
-    <option name="y" value="-744" />
+    <option name="x" value="51" />
+    <option name="y" value="24" />
     <option name="width" value="1315" />
     <option name="height" value="744" />
   </component>
@@ -122,8 +122,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -152,6 +150,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -816,16 +816,18 @@
       <workItem from="1488579836092" duration="2897000" />
       <workItem from="1488593798660" duration="6804000" />
       <workItem from="1488611726770" duration="3076000" />
-      <workItem from="1488616062152" duration="5660000" />
+      <workItem from="1488616062152" duration="5967000" />
+      <workItem from="1488647125275" duration="2941000" />
+      <workItem from="1488650709760" duration="10264000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32832000" />
+    <option name="totallyTimeSpent" value="46344000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1417" y="-744" width="1315" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="51" y="24" width="1315" height="744" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -848,7 +850,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31594634" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43219075" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -869,13 +871,48 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/NearestNeighbour.py</url>
+          <line>245</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/NearestNeighbour.py</url>
           <line>236</line>
-          <option name="timeStamp" value="40" />
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/NearestNeighbour.py</url>
+          <line>225</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/NearestNeighbour.py</url>
+          <line>204</line>
+          <option name="timeStamp" value="92" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/NearestNeighbour.py</url>
           <line>230</line>
-          <option name="timeStamp" value="41" />
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/NearestNeighbour.py</url>
+          <line>228</line>
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/NearestNeighbour.py</url>
+          <line>231</line>
+          <option name="timeStamp" value="95" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/NearestNeighbour.py</url>
+          <line>229</line>
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/NearestNeighbour.py</url>
+          <line>226</line>
+          <option name="timeStamp" value="97" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -885,7 +922,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="51" />
+      <option name="time" value="100" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -900,9 +937,46 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#18#36#0" expanded="true" />
-            <element signature="e#643#679#0" expanded="false" />
-            <element signature="e#1079#1115#0" expanded="false" />
-            <element signature="e#6699#6761#0" expanded="false" />
+            <element signature="e#1508#1544#0" expanded="false" />
+            <element signature="e#5109#5131#0" expanded="false" />
+            <element signature="e#7121#7183#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3/dist-packages/apport_python_hook.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2718">
+          <caret line="151" column="0" lean-forward="false" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_PLUGINS_DIR$/python/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_PLUGINS_DIR$/python/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28710">
+          <caret line="1595" column="0" lean-forward="false" selection-start-line="1595" selection-start-column="0" selection-end-line="1595" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NearestNeighbour.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#18#36#0" expanded="true" />
+            <element signature="e#1508#1544#0" expanded="false" />
+            <element signature="e#5109#5131#0" expanded="false" />
+            <element signature="e#7121#7183#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -929,9 +1003,9 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#18#36#0" expanded="true" />
-            <element signature="e#643#679#0" expanded="false" />
-            <element signature="e#1079#1115#0" expanded="false" />
-            <element signature="e#6699#6761#0" expanded="false" />
+            <element signature="e#1508#1544#0" expanded="false" />
+            <element signature="e#5109#5131#0" expanded="false" />
+            <element signature="e#7121#7183#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -949,9 +1023,9 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#18#36#0" expanded="true" />
-            <element signature="e#643#679#0" expanded="false" />
-            <element signature="e#1079#1115#0" expanded="false" />
-            <element signature="e#6699#6761#0" expanded="false" />
+            <element signature="e#1508#1544#0" expanded="false" />
+            <element signature="e#5109#5131#0" expanded="false" />
+            <element signature="e#7121#7183#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -969,9 +1043,9 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#18#36#0" expanded="true" />
-            <element signature="e#643#679#0" expanded="false" />
-            <element signature="e#1079#1115#0" expanded="false" />
-            <element signature="e#6699#6761#0" expanded="false" />
+            <element signature="e#1508#1544#0" expanded="false" />
+            <element signature="e#5109#5131#0" expanded="false" />
+            <element signature="e#7121#7183#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -989,9 +1063,9 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#18#36#0" expanded="true" />
-            <element signature="e#643#679#0" expanded="false" />
-            <element signature="e#1079#1115#0" expanded="false" />
-            <element signature="e#6699#6761#0" expanded="false" />
+            <element signature="e#1508#1544#0" expanded="false" />
+            <element signature="e#5109#5131#0" expanded="false" />
+            <element signature="e#7121#7183#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1009,9 +1083,9 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#18#36#0" expanded="true" />
-            <element signature="e#643#679#0" expanded="false" />
-            <element signature="e#1079#1115#0" expanded="false" />
-            <element signature="e#6699#6761#0" expanded="false" />
+            <element signature="e#1508#1544#0" expanded="false" />
+            <element signature="e#5109#5131#0" expanded="false" />
+            <element signature="e#7121#7183#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1029,9 +1103,9 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#18#36#0" expanded="true" />
-            <element signature="e#643#679#0" expanded="false" />
-            <element signature="e#1079#1115#0" expanded="false" />
-            <element signature="e#6699#6761#0" expanded="false" />
+            <element signature="e#1508#1544#0" expanded="false" />
+            <element signature="e#5109#5131#0" expanded="false" />
+            <element signature="e#7121#7183#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1049,9 +1123,9 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#18#36#0" expanded="true" />
-            <element signature="e#643#679#0" expanded="false" />
-            <element signature="e#1079#1115#0" expanded="false" />
-            <element signature="e#6699#6761#0" expanded="false" />
+            <element signature="e#1508#1544#0" expanded="false" />
+            <element signature="e#5109#5131#0" expanded="false" />
+            <element signature="e#7121#7183#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1061,6 +1135,14 @@
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
           <selected id="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3/dist-packages/apport_python_hook.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2700">
+          <caret line="151" column="0" lean-forward="false" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1074,29 +1156,29 @@
     </entry>
     <entry file="file://$APPLICATION_PLUGINS_DIR$/python/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28080">
+        <state relative-caret-position="238">
           <caret line="1595" column="0" lean-forward="false" selection-start-line="1595" selection-start-column="0" selection-end-line="1595" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/lib/python3/dist-packages/apport_python_hook.py">
+    <entry file="file:///usr/local/lib/python3.5/dist-packages/scipy/sparse/compressed.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="151" column="0" lean-forward="false" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+        <state relative-caret-position="-3289">
+          <caret line="224" column="0" lean-forward="false" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/NearestNeighbour.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="205" column="0" lean-forward="true" selection-start-line="205" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
+        <state relative-caret-position="387">
+          <caret line="241" column="0" lean-forward="true" selection-start-line="241" selection-start-column="0" selection-end-line="241" selection-end-column="0" />
           <folding>
             <element signature="e#18#36#0" expanded="true" />
-            <element signature="e#643#679#0" expanded="false" />
-            <element signature="e#1079#1115#0" expanded="false" />
-            <element signature="e#6699#6761#0" expanded="false" />
+            <element signature="e#1508#1544#0" expanded="false" />
+            <element signature="e#5109#5131#0" expanded="false" />
+            <element signature="e#7121#7183#0" expanded="false" />
           </folding>
         </state>
       </provider>
