@@ -11,6 +11,7 @@ import nltk
 from nltk.stem.lancaster import LancasterStemmer
 
 from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.feature_extraction.text import TfidfVectorizer
 from scipy import spatial
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics import pairwise
@@ -82,7 +83,7 @@ print ("First line after cleanup from test Data: ", linesOfTrainDataAfterSteming
 
 # Logic to do the 1% of
 
-
+vectorizer = TfidfVectorizer(sublinear_tf=True, max_df=0.5, stop_words='english')
 vectorizer.fit_transform(linesOfTrainDataAfterStemingWithWordCompression)
 print (len(vectorizer.vocabulary_))
 
@@ -127,7 +128,10 @@ print ("First line after cleanup from test Data: : ", linesOfTestDataAfterStemin
 
 
 smatrixFromTraining = vectorizer.transform(linesOfTrainDataAfterSteming)
-smatrixFromTesting = vectorizer.transform(linesOfTestDataAfterPreProcessing)
+#sp.sparse.issparse(smatrixFromTraining)
+
+
+smatrixFromTesting = vectorizer.transform(linesOfTestDataAfterSteming)
 
 print('-----')
 
@@ -152,7 +156,8 @@ for vt in smatrixFromTesting:
             cosineSimilarityValue= 0
         cosineSimilarityValues.append(cosineSimilarityValue)
 
-    kneighbours = heapq.nlargest(9, cosineSimilarityValues)
+    #kneighbours = heapq.nlargest(9, cosineSimilarityValues)
+    kneighbours = sp.sparse.csr_matrix.max(cosineSimilarityValues)
 
     neighbourReviewTypeList = []
     neighbourReviewTypeNegative = 0
