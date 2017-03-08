@@ -1,4 +1,8 @@
+## Move to notebook
+
 #Imports for code
+
+
 import numpy as np
 import scipy as sp
 #%matplotlib inline
@@ -22,100 +26,16 @@ with open("TestData/train.dat", "r") as fh:
     linesOfTrainData = fh.readlines()
 len(linesOfTrainData)
 
-# transform docs into lists of words
-# docsTrain = [l.split() for l in linesOfTrainData]
-# print("Train data:")
-# print("Number of docs: %d." % len(docsTrain))
-# print("Number of words: %d." % np.sum([len(d) for d in docsTrain]))
-
-# Format data : open docs file and read its lines
-
 #with open("TestData/format.dat", "r") as fh:
 with open("TestData/Test/format_out.dat", "r") as fh:
     linesOfFormat = fh.readlines()
 len(linesOfFormat)
-
-# transform docs into lists of words
-# docsFormat = [l.split() for l in linesOfFormat]
-# print("Format data:")
-# print("Number of docs: %d." % len(docsFormat))
-# print("Number of words: %d." % np.sum([len(d) for d in docsFormat]))
-
-# Test Data : open docs file and read its lines
 
 #with open("TestData/test.dat", "r") as fh:
 with open("TestData/Test/test_out.dat", "r") as fh:
     linesOfTest = fh.readlines()
 len(linesOfTest)
 
-# transform docs into lists of words
-# docsTest = [l.split() for l in linesOfTest]
-# print("Test data:")
-# print("Number of docs: %d." % len(docsTest))
-# print("Number of words: %d." % np.sum([len(d) for d in docsTest]))
-
-# get a frequency count for all words in the Training docs
-# wordsInTraining = {}
-# for d in docsTrain:
-#     for w in d:
-#         if w not in wordsInTraining:
-#             wordsInTraining[w] = 1
-#         else:
-#             wordsInTraining[w] += 1
-# print("Number of unique words in Training: %d." % len(wordsInTraining))
-
-# #print ("Number of is in Test: %d." % wordsInTest['is'])
-# print ("Number of is in Training: %d." % wordsInTraining['is'])
-
-
-# positiveReview = 0
-# negativeReview = 0
-# for d in docsFormat:
-#     for w in d:
-#         #print(w)
-#         if w.strip()[0] == '-':
-#             negativeReview += 1
-#         elif w.strip()[0] == '+':
-#             positiveReview += 1
-#         break
-#
-# print("Positive reviews : %d." % positiveReview)
-# print("Negative reviews : %d." % negativeReview)
-
-# positiveReview = 0
-# negativeReview = 0
-# for d in docsTrain:
-#     for w in d:
-#         #print(w)
-#         if w.strip()[0] == '-':
-#             negativeReview += 1
-#         elif w.strip()[0] == '+':
-#             positiveReview += 1
-#         break
-#
-# print("Positive reviews : %d." % positiveReview)
-# print("Negative reviews : %d." % negativeReview)
-
-#test for stopwords
-# stops = set(stopwords.words('english'))
-#
-# wordCount = 0
-# for line in linesOfTrainData:
-#     for w in line.split():
-#         if w.lower() not in stops:
-#             wordCount+=1
-#
-# print(wordCount)
-
-#Total world count
-# wordCount = 0
-# for line in linesOfTrainData:
-#     for w in line.split():
-#         wordCount+=1
-#
-# print(wordCount)
-
-#test for stopwords
 stops = set(stopwords.words('english'))
 
 ######
@@ -138,20 +58,44 @@ for line in linesOfTrainDataAfterPreProcessing:
             newLine = newLine.replace(w, st.stem(w)) # for stemming
     linesOfTrainDataAfterSteming.append(newLine)
 
+# get a frequency count for all words in the Test docs
+wordsInTest = {}
+for d in linesOfTrainDataAfterPreProcessing:
+    for w in d.split():
+        if w not in wordsInTest:
+            wordsInTest[w] = 1
+        else:
+            wordsInTest[w] += 1
+print("Number of unique words: %d." % len(wordsInTest))
 
-print ("First line after cleanup from test Data: ", linesOfTrainDataAfterSteming[0])
+linesOfTrainDataAfterStemingWithWordCompression = []
+for line in linesOfTrainDataAfterPreProcessing:
+    newLine = line
+    for w in newLine.split():
+        if wordsInTest[w] < 1500:
+            newLine = newLine.replace(w, ' ') # for stemming
+    linesOfTrainDataAfterStemingWithWordCompression.append(newLine)
 
 
-vectorizer.fit_transform(linesOfTrainDataAfterSteming)
-print (vectorizer.vocabulary_)
 
-#Sparce vectore for training
+print ("First line after cleanup from test Data: ", linesOfTrainDataAfterStemingWithWordCompression[0])
 
-#print(smatrixFromTraining)
+# Logic to do the 1% of
+
+
+vectorizer.fit_transform(linesOfTrainDataAfterStemingWithWordCompression)
+print (len(vectorizer.vocabulary_))
+
+# print("Before cutting :", len(vectorizer.vocabulary_))
+#
+# for vocab in vectorizer.vocabulary_:
+#     if vectorizer.vocabulary_[vocab] < 2000:
+#         del vectorizer.vocabulary_[vocab]
+#
+# print("After cutting :", len(vectorizer.vocabulary_))
 
 print('-----')
 
-#smatrixFromTraining = cosine_similarity(smatrixFromTraining, dense_output=False)
 
 ######
 
@@ -165,7 +109,7 @@ for line in linesOfTest:
             newLine = newLine.replace(' '+w+' ', ' ') # for identifting words
     linesOfTestDataAfterPreProcessing.append(newLine)
 
-print ("Befor steming"+ linesOfTestDataAfterPreProcessing[0])
+print ("Before steming: "+ linesOfTestDataAfterPreProcessing[0])
 
 linesOfTestDataAfterSteming= []
 for line in linesOfTestDataAfterPreProcessing:
@@ -177,15 +121,6 @@ for line in linesOfTestDataAfterPreProcessing:
     linesOfTestDataAfterSteming.append(newLine)
 
 print("After steming"+ linesOfTestDataAfterSteming[0])
-
-# wordsInTraining = {}
-# for d in linesOfTestDataAfterPreProcessing:
-#     for w in d.split():
-#         if w not in wordsInTraining:
-#             wordsInTraining[w] = 1
-#         else:
-#             wordsInTraining[w] += 1
-# print("Number of unique words in Test: %d." % len(wordsInTraining))
 
 
 print ("First line after cleanup from test Data: : ", linesOfTestDataAfterSteming[0])
